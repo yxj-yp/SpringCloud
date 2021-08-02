@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抢购</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.js"></script>
+</head>
+
+<body>
+<button id="brush">抢购</button>
+</body>
+
+<script>
+    $(function(){
+        $("#rush").click(function () {
+            var btnObj = document.getElementById("J_LinkBuy"); // 第二步中可知 id=“btn"
+            var timer = setInterval(function () {
+                if (btnObj.disabled == false) { // 当按钮可以点击时
+                    btnObj.click();        //点击
+                    clearInterval(timer); // 选购完成后关闭timer，否则将一直购买，土豪随意
+                }
+            });
+        })
+    })
+</script>
+</html>
+
+
+var btnObj = document.getElementById("J_LinkBuy");
+var timer = setInterval(function () {
+btnObj.click();        //点击
+clearInterval(timer);
+},1000);
