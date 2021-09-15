@@ -12,8 +12,10 @@ import java.util.Date;
 
 public class test {
     public static void main(String[] args) {
-        StringBuffer sb=new StringBuffer();
-        sb.append("205003|0|0|");
-        System.out.println(sb.toString().substring(0, sb.length() - 1));
+//        StringBuffer sb=new StringBuffer();
+//        sb.append("205003|0|0|");
+//        System.out.println(sb.toString().substring(0, sb.length() - 1));
+        System.out.println(String.format("%04d", 22));
+
     }
 }
