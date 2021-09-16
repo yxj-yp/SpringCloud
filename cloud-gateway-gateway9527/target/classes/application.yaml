@@ -1,0 +1,43 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称j进行路由
+      routes:
+        - id: payment_route # 路由的id,没有规定规则但要求唯一,建议配合服务名
+          #匹配后提供服务的路由地址
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/payment/get/** # 断言，路径相匹配的进行路由
+
+        - id: payment_route2
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
+          predicates: #断言 官网提供了11个断言方式 可根据需求选择
+            - Path=/payment/lb/** #路径相匹配的进行路由
+#            - After=2021-09-15T14:48:00.118+08:00[Asia/Shanghai] #约定时间之后进行路由
+#            - Before=3021-09-15T14:48:00.118+08:00[Asia/Shanghai] #约定时间之前进行路由
+#            - Between=2021-09-15T14:48:00.118+08:00[Asia/Shanghai],3021-09-15T14:48:00.118+08:00[Asia/Shanghai] #在约定时间之间进行路由
+#            - Cookie=cookie1,\d+ #根据cookie中的值（cookie名+正则表达式）进行断言 匹配上则执行路由
+#            - Header=herder1,\d+ #根据请求头的值（属性名+正则表达式）进行断言 匹配上则执行路由
+#            - Host=**yy** #根据Host中字符串进行断言 匹配上则执行路由
+#            - Method=GET #根据请求类型（get、post）进行断言
+#            - Query=yy,/d #根据请求参数进行断言  支持传入两个值 一个属性名 一个参数  参数可为正则表达式 匹配上则执行路由
+#            - RemoteAddr
+#            - Weight
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
