@@ -1,0 +1,3 @@
+com\yy\springcloud\GateWayMian9527.class
+com\yy\springcloud\filter\MyLogGatewayFilter.class
+com\yy\springcloud\config\GatewayConfig.class

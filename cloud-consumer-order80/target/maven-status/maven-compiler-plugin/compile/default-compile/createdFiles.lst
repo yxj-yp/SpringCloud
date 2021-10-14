@@ -1,0 +1,6 @@
+com\yy\myrule\MySelfRule.class
+com\yy\springcloud\config\ApplicationContextConfig.class
+com\yy\springcloud\loadbalance\MyLB.class
+com\yy\springcloud\loadbalance\impl\myLBImpl.class
+com\yy\springcloud\orderMina80.class
+com\yy\springcloud\controller\orderController.class

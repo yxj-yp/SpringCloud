@@ -1,0 +1,4 @@
+com\yy\springcloud\service\PaymentFallbackService.class
+com\yy\springcloud\OrderHystrixMain80.class
+com\yy\springcloud\service\PaymentHystrixService.class
+com\yy\springcloud\controller\OrderHyrixController.class

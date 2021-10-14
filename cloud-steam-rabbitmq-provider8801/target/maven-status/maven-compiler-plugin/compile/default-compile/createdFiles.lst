@@ -1,0 +1,4 @@
+com\yy\cloud\service\impl\MessageProvider.class
+com\yy\cloud\controller\SendMessageController.class
+com\yy\cloud\SteamMQMain8801.class
+com\yy\cloud\service\IMessageProvider.class

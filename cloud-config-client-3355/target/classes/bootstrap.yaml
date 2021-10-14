@@ -22,3 +22,10 @@ management:
     web:
       exposure:
         include: "*"
+
+# rabbitmq 配置
+rabbitmq:
+  host: localhsot
+  prot: 5762
+  username: guest
+  passward: guest

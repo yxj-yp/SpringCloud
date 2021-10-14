@@ -1,7 +1,6 @@
 package com.yy.springclout;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplicationExtensionsKt;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 

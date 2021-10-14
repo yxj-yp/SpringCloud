@@ -1,2 +1,5 @@
 com\yy\springcloud\PaymentMain8001.class
-concurr11.class
+com\yy\springcloud\dao\PaymentDao.class
+com\yy\springcloud\controller\PaymentController.class
+com\yy\springcloud\service\impl\PaymentServiceImpl.class
+com\yy\springcloud\service\PaymentService.class

@@ -1,0 +1,32 @@
+server:
+  port: 8802
+
+spring:
+  application:
+    name: cloud-steam-customer
+  rabbitmq:
+    host: localhost
+    prot: 5726
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+      bindings:
+        input:
+          destination: studyExchange
+          content-type: application/json
+          binder: defaultRabbit
+          group: yy1 #分组
+eureka:
+  client:
+    service-url:
+      # defaultZone: http://localhost:7001/eureka 单机版
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ #集群版
+      instance:
+        lease-renawal-interval-in-seconds: 2 #设置心跳时间间隔（默认三十秒）
+        lease-expiration-duration-in-seconds: 5 #如果超过了5秒得间隔（默认90秒）
+        instance-id: send-8801.com #在信息列表 显示主机名称
+        prefer-ip-address: true # 访问路径变为ip地址
