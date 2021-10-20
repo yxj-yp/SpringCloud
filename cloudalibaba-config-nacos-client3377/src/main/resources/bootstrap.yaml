@@ -11,7 +11,9 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yaml #指定配置文件格式
+        group: DEFAULT_GROUP #指定配置文件group 默认分组（DEFAULT_GROUP）可不写
+#        namespace:  #指定配置文件namespace,值填id 默认（public）可不写
 
-#${spring.application.name}-${spring.profile.active}.${spring.cloud.config.file.extension}
+#nacos配置文件命名格式：${spring.application.name}-${spring.profile.active}.${spring.cloud.config.file.extension}
 
-# nacos-config-client-dev.yaml
+#ex: nacos-config-client-dev.yaml
