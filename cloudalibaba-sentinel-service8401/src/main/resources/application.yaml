@@ -13,6 +13,14 @@ spring:
       transport:
         dashboard: localhost:8080
         port: 8719
+      datasource: # sentinel持久化配置
+        ds1:  # 第一个数据源
+          nacos:
+            server-addr: localhost:8848
+            dataId: ${spring.application.name}
+            groupId: DEFAULT_GROUP
+            data_type: json
+            rule_type: flow
 
 management:
   endpoints:
